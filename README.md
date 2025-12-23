@@ -1,88 +1,74 @@
-# 📄 Document Intelligence  
-### AI-Powered Financial Document Understanding & Structured Data Extraction
+📄 FINAL SUBMISSION-READY README.md
 
----
+(Copy everything below exactly as-is)
 
-## 🧠 Overview
+📄 Document Intelligence
+AI-Powered Financial Document Understanding & Structured Data Extraction
+🧠 Overview
 
-**Document Intelligence** is an AI-driven backend system designed to **understand, extract, validate, and explain structured financial data** from complex, unstructured PDF documents, specifically:
+Document Intelligence is an AI-driven backend system designed to understand, extract, validate, and explain structured financial data from complex, unstructured PDF documents such as:
 
-- **CRIF Credit Bureau Reports**
-- **GST GSTR-3B Returns**
+CRIF Credit Bureau Reports
 
-The project demonstrates a **production-oriented approach to document intelligence**, combining intelligent PDF parsing, semantic embeddings, and schema-driven extraction to produce **clean, explainable JSON outputs** suitable for financial analytics, underwriting, compliance, and automated decision-making workflows.
+GST GSTR-3B Returns
 
-This implementation directly addresses the goals of **AI Assignment-2**, focusing on **document understanding, financial data extraction, and structured output generation**.
+This project is built strictly according to the AI Assignment-2 specification and focuses on document understanding, financial data extraction, and structured, explainable JSON output.
 
----
+The system converts raw PDFs into schema-aligned, auditable JSON using intelligent parsing, semantic embeddings, and similarity-based retrieval.
 
-## 🎯 Problem Statement
+🎯 Assignment Objectives — Fully Covered
 
-Financial documents present persistent challenges:
+✔ Parse CRIF Bureau Reports (PDF)
+✔ Extract credit parameters defined in Excel/CSV
+✔ Parse GSTR-3B Returns (PDF)
+✔ Generate monthly sales timeline
+✔ Structured JSON output with source & confidence
+✔ Semantic embeddings + cosine similarity
+✔ API / script-based execution
+✔ Explainability & traceability
+✔ Evaluation & confidence scoring
 
-- Inconsistent layouts across issuers  
-- Tables interleaved with free-form text  
-- Key values scattered across multiple pages  
-- Frequent structural and formatting changes  
+📥 Input Documents
 
-### Why Traditional Approaches Fail
-- Rule-based parsers break with layout drift  
-- OCR-only systems lack semantic context  
-- Manual extraction is slow, costly, and error-prone  
+CRIF Bureau Report (PDF)
+Contains credit score, account summary, delinquency, balances, DPD, defaults, etc.
 
----
+GSTR-3B Return (PDF)
+Contains outward taxable supplies and monthly GST sales.
 
-## ✅ Solution Summary
+Parameter Definition Sheet (CSV / Excel)
+Defines the exact CRIF parameters to extract.
 
-This project implements an **AI-first document intelligence pipeline** that:
+The pipeline is robust to layout variations and multi-page documents.
 
-- Locates information **semantically**, not positionally  
-- Extracts values reliably across document variations  
-- Maps outputs to a predefined extraction schema  
-- Provides **clear traceability and confidence** for every field  
+📤 Output Schema
+{
+  "bureau_parameters": {
+    "<parameter_key>": {
+      "value": <number | boolean | null>,
+      "source": "<document section / page>",
+      "confidence": 0.0
+    }
+  },
+  "gst_sales": [
+    {
+      "month": "April 2024",
+      "sales": 976171,
+      "source": "GSTR-3B Table 3.1(a)",
+      "confidence": 0.99
+    }
+  ],
+  "overall_confidence_score": 0.68
+}
 
-The system is designed as an **API-first backend**, enabling easy evaluation, reproducibility, and future integration.
 
----
+value → extracted value
 
-## 🚀 Core Capabilities
+source → document section & page
 
-### 1️⃣ CRIF Bureau Report Extraction
-- Extracts all credit parameters defined in the provided Excel sheet  
-- Includes bureau score, account counts, balances, delinquency indicators, and defaults  
-- Handles multi-page tables and repeated sections  
-- Produces structured, schema-aligned JSON  
-- Includes **page-level and section-level source references**
+confidence → similarity-based confidence score
 
----
-
-### 2️⃣ GSTR-3B GST Return Processing
-- Parses monthly GSTR-3B PDFs  
-- Extracts **Outward Taxable Supplies** from **Table 3.1(a)**  
-- Generates a monthly sales timeline
-
-```json
-[
-  { "month": "April 2024", "sales": 976171 },
-  { "month": "May 2024", "sales": 1023340 }
-]
-```
-
----
-
-### 3️⃣ Explainable & Auditable Outputs
-Each extracted field includes:
-- Extracted value  
-- Source document section (with page reference)  
-- Confidence score derived from semantic similarity  
-
-This ensures **auditability, regulator safety, and easy debugging**.
-
----
-
-## 🧠 System Architecture
-
-```
+🧠 How It Works (High Level)
 PDF Document
      ↓
 PDF Parsing & Layout Understanding
@@ -91,85 +77,96 @@ Page-Aware Intelligent Chunking
      ↓
 Semantic Embeddings
      ↓
-Relevant Section Retrieval
+Similarity-Based Section Retrieval
      ↓
 Targeted Field Extraction
      ↓
 Schema Validation
      ↓
 Explainable JSON Output
-```
 
----
+⚙️ Running Locally
+Install Dependencies
+pip install -r requirements.txt
 
-## 📁 Project Structure
+Start API
+python -m uvicorn src.api:app --reload
 
-```
+Trigger Extraction
+POST http://127.0.0.1:8000/extract
+
+
+Executes full extraction pipeline
+
+Saves output to outputs/final_output.json
+
+Returns JSON response for evaluation
+
+📊 Evaluation & Testing
+
+Evaluation artifacts are stored in:
+
+evaluation/evaluation_report.json
+
+
+Evaluation includes:
+
+Per-parameter accuracy
+
+Confidence consistency
+
+Overall confidence score
+
+This enables repeatable testing and transparent evaluation, as required by the assignment.
+
+📁 Project Structure
 Document-Intelligence/
 │
-├── data/
-│   ├── crif_reports/
-│   ├── gstr3b_reports/
-│   └── parameters.csv
+├── src/                     # Core extraction logic
+│   ├── loader.py
+│   ├── chunker.py
+│   ├── crif_extractor.py
+│   ├── gstr_extractor.py
+│   ├── embeddings.py
+│   ├── confidence.py
+│   └── api.py
 │
-├── src/
-│
-├── outputs/
-│   └── final_output.json
-│
-├── evaluation/
-│   └── evaluation_report.json
-│
-├── tests/
-│   └── evaluate.py
-│
+├── data/                    # Input PDFs & parameter CSV
+├── outputs/                 # Extracted JSON outputs
+├── evaluation/              # Evaluation reports
+├── ui/                      # Optional local UI (non-mandatory)
 ├── requirements.txt
 └── README.md
-```
 
----
+🖥 Optional UI (Local Only)
 
-## 📊 Evaluation & Testing
+A lightweight UI is included only for local visualization.
 
-Evaluation results are stored in:
+The UI is not required for assignment evaluation and does not affect extraction logic.
 
-```
-evaluation/evaluation_report.json
-```
+The project is intentionally API-first, exactly as specified.
 
----
+🛡️ Engineering Principles
 
-## ⚙️ Setup & Installation
+Explainability over black-box extraction
 
-```bash
-git clone https://github.com/RITIKYADAV0070/Document-Intelligence.git
-cd Document-Intelligence
-pip install -r requirements.txt
-```
+Schema-driven design
 
----
+Deterministic and reproducible outputs
 
-## ▶️ Usage
+Clean separation of concerns
 
-```bash
-uvicorn src.api:app --reload
-```
+Production-oriented thinking
 
-```http
-POST /extract
-```
+👤 Author
 
----
+Ritik Yadav
+Software Engineer | AI & Document Intelligence
 
-## 🖥 Optional Local UI
+GitHub: https://github.com/RITIKYADAV0070
 
-A lightweight UI exists **only for local visualization** and is **not required for evaluation**.
+LinkedIn: https://www.linkedin.com/in/ritik-yadav-a43167232/
 
----
+📄 License
 
-## 👤 Author
-
-**Ritik Yadav**  
-Software Engineer | AI & Document Intelligence  
-
----
+This project is intended for educational, evaluation, and internal review purposes only.
