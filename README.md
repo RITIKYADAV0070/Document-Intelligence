@@ -3,143 +3,252 @@
 
 ---
 
+## 🔥 TL;DR (For Evaluators & Reviewers)
+
+- Extracts structured financial data from unstructured PDFs  
+- Supports CRIF Credit Bureau Reports and GST GSTR-3B Returns  
+- Uses semantic embeddings for robust information retrieval  
+- Produces explainable, auditable JSON outputs  
+- Designed for accuracy, robustness, and production readiness  
+
+---
+
 ## 🧠 Executive Summary
 
-**Document Intelligence** is a production-ready AI system designed to **understand, extract, and explain structured financial data from complex, unstructured PDF documents** such as **CRIF Credit Bureau Reports** and **GST GSTR-3B Returns**.
+**Document Intelligence** is a production-ready AI system designed to **understand, extract, validate, and explain structured financial data from complex, unstructured PDF documents**, including:
 
-The system converts raw PDFs into **auditable, explainable, schema-aligned JSON outputs** using intelligent PDF parsing, semantic embeddings, targeted extraction pipelines, and structured evaluation.
+- CRIF Credit Bureau Reports  
+- GST GSTR-3B Returns  
+
+The system converts raw PDFs into **schema-aligned, explainable JSON outputs** using:
+
+- Intelligent PDF parsing  
+- Semantic embeddings & retrieval  
+- Targeted extraction pipelines  
+- Structured evaluation and validation  
+
+This solution is suitable for **financial analytics, compliance, underwriting, and decisioning workflows**.
 
 ---
 
 ## 🎯 Problem Statement
 
-Financial documents suffer from:
+Financial documents present several challenges:
+
 - Inconsistent layouts across issuers  
-- Tables mixed with free-form text  
-- Critical values spread across pages  
+- Tables mixed with unstructured text  
+- Critical values scattered across pages  
+- Frequent format changes  
 
-Rule-based parsing fails at scale, while manual processing is slow and error-prone.
+### Why Traditional Approaches Fail
+- Rule-based parsing breaks with layout changes  
+- OCR-only systems lack semantic understanding  
+- Manual extraction is slow, costly, and error-prone  
 
-### ✅ Solution
+---
+
+## ✅ Solution Overview
+
 An AI-first document intelligence pipeline that:
-- Locates relevant information semantically  
-- Extracts values reliably  
-- Maps them to predefined schemas  
-- Explains *where and why* each value was extracted  
+
+- Locates information semantically (not position-based)  
+- Extracts values reliably across document formats  
+- Maps outputs to predefined schemas  
+- Explains where and why each value was extracted  
 
 ---
 
 ## 🚀 Key Capabilities
 
-### CRIF Bureau Report Extraction
-- Extracts predefined credit parameters  
-- Identifies credit score, account summaries, outstanding balances, and payment behavior  
-- Outputs structured JSON with page-level source explanations  
+### 1️⃣ CRIF Bureau Report Extraction
+- Extracts predefined credit parameters (as per Excel schema)  
+- Identifies:
+  - Credit score  
+  - Account summaries  
+  - Outstanding balances  
+  - Payment behavior  
+- Outputs structured JSON  
+- Includes page/section-level source explanations  
 
-### GSTR-3B GST Return Processing
+---
+
+### 2️⃣ GSTR-3B GST Return Processing
 - Parses monthly GSTR-3B PDFs  
-- Generates a monthly sales timeline  
+- Extracts outward supplies (sales)  
+- Generates a monthly sales timeline:
 
 ```json
 [
   { "month": "2024-01", "sales": 1250000 },
   { "month": "2024-02", "sales": 1420000 }
 ]
-```
-
-### Explainable Output
+3️⃣ Explainable & Auditable Output
 Each extracted field includes:
-- Value  
-- Document source (page / section)  
-- Extraction reasoning  
-- Confidence (where applicable)  
 
----
+Extracted value
 
-## 🧠 System Architecture
+Source document reference (page / section)
 
-PDF → Parsing & Chunking → Embeddings → Semantic Retrieval → Structured Extraction → Explainable JSON
+Extraction reasoning
 
----
+Confidence (where applicable)
 
-## 📁 Project Structure
+This ensures auditability, regulator safety, and easy debugging.
 
-```
+🧠 System Architecture
+css
+Copy code
+PDF Document
+     ↓
+PDF Parsing & Layout Understanding
+     ↓
+Intelligent Chunking (Page-Aware)
+     ↓
+Semantic Embeddings
+     ↓
+Relevant Section Retrieval
+     ↓
+Targeted Field Extraction
+     ↓
+Schema Validation
+     ↓
+Explainable JSON Output
+🏗️ Technical Design
+Document Ingestion
+Text and table extraction from PDFs
+
+Page-level metadata preservation
+
+Intelligent Chunking
+Logical segmentation instead of naive splitting
+
+Context-preserving chunks
+
+Embeddings & Semantic Search
+Converts chunks into embeddings
+
+Uses similarity search to locate relevant sections
+
+Robust to layout and formatting variations
+
+Extraction & Validation
+Schema-first extraction
+
+Field-level validation
+
+Deterministic outputs
+
+📁 Project Structure
+graphql
+Copy code
 Document-Intelligence/
-├── src/
-├── data/
-├── evaluation/
+│
+├── src/                     # Core system logic
+│   ├── loaders/             # PDF loaders & preprocessors
+│   ├── extractors/          # CRIF & GST extraction pipelines
+│   ├── embeddings/          # Embedding generation & retrieval
+│   ├── validators/          # Schema & consistency checks
+│   └── utils/               # Helper utilities
+│
+├── data/                    # Sample input PDFs
+│
+├── evaluation/              # Evaluation configs & reports
 │   └── evaluation_report.json
-├── outputs/
-├── tests/
-├── ui/
-├── requirements.txt
+│
+├── outputs/                 # Final structured JSON outputs
+│
+├── tests/                   # Unit & integration tests
+│
+├── ui/                      # Optional UI / API layer
+│
+├── requirements.txt         # Python dependencies
 └── README.md
-```
+📊 Evaluation & Testing
+Evaluation Goals
+Accuracy of extracted fields
 
----
+Schema completeness
 
-## 📊 Evaluation
+Robustness across document formats
 
-Evaluation artifacts and metrics are stored in:
+Explainability and traceability
 
-```
+Evaluation Artifacts
+All evaluation configurations and results are stored in:
+
+bash
+Copy code
 evaluation/evaluation_report.json
-```
+This enables transparent scoring, repeatable testing, and regression safety.
 
-This ensures transparency, repeatability, and regression safety before production.
-
----
-
-## ⚙️ Setup
-
-```bash
+⚙️ Setup & Installation
+bash
+Copy code
 git clone https://github.com/RITIKYADAV0070/Document-Intelligence.git
 cd Document-Intelligence
 pip install -r requirements.txt
-```
+Python 3.9+ recommended
 
----
+▶️ Usage
+CRIF Extraction
+bash
+Copy code
+python src/extractors/crif_extractor.py --input data/crif_report.pdf
+GST Sales Timeline
+bash
+Copy code
+python src/extractors/gst_extractor.py --input data/gstr3b.pdf
+Output
+Saved in the outputs/ directory
 
-## ▶️ Usage
+Fully structured and explainable JSON
 
-```bash
-python src/extractors/crif_extractor.py
-python src/extractors/gst_extractor.py
-```
+🛡️ Engineering Principles
+Explainability over black-box extraction
 
-Outputs are saved in the `outputs/` directory with structured JSON and explanations.
+Schema-first design
 
----
+Deterministic and reproducible outputs
 
-## 🛡️ Engineering Principles
+Clear separation of concerns
 
-- Explainability over black-box extraction  
-- Schema-first design  
-- Deterministic outputs  
-- Separation of concerns  
-- Production-readiness  
+Production-oriented architecture
 
----
+🔐 Security & Compliance Notes
+No hard-coded secrets
 
-## 📌 Future Enhancements
+Local-only document processing
 
-- OCR support for scanned PDFs  
-- REST API using FastAPI  
-- Analytics dashboard  
-- Fine-tuned financial document models  
-- Role-based access control  
+Easy extension for:
 
----
+Encryption
 
-## 👤 Author
+Access control
 
-**Ritik Yadav**  
-GitHub: https://github.com/RITIKYADAV0070  
+Audit logging
+
+📌 Future Enhancements
+OCR support for scanned PDFs
+
+FastAPI-based REST service
+
+Interactive analytics dashboard
+
+Fine-tuned financial document models
+
+Role-based access control
+
+👤 Author
+Ritik Yadav
+Software Engineer | AI & Document Intelligence
+
+GitHub: https://github.com/RITIKYADAV0070
+
 LinkedIn: https://www.linkedin.com/in/ritik-yadav-a43167232/
 
----
+📄 License
+This project is intended for educational, evaluation, and internal review purposes.
+Commercial usage requires prior authorization.
 
-## 📄 License
-
-This project is intended for **educational, evaluation, and internal review purposes**.
+yaml
+Copy code
