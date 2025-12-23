@@ -1,0 +1,23 @@
+{
+  "bureau_parameters": {
+    "bureau_score": {
+      "value": 675,
+      "source": "CRIF HM Score(s) (page 1)",
+      "confidence": 0.98
+    },
+    "total_accounts": {
+      "value": 24,
+      "source": "Account Summary (page 1)",
+      "confidence": 0.97
+    }
+  },
+  "gst_sales": [
+    {
+      "month": "GSTR3B_11_2024",
+      "sales": 649677,
+      "source": "GSTR-3B Table 3.1(a)",
+      "confidence": 0.99
+    }
+  ],
+  "overall_confidence_score": 0.97
+}

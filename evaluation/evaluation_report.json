@@ -1,0 +1,45 @@
+{
+  "evaluation_summary": {
+    "total_runs": 100,
+    "methodology": "Extraction pipeline executed repeatedly on the same documents to measure consistency and accuracy of outputs.",
+    "notes": "The pipeline is deterministic; confidence scores are derived from embedding similarity."
+  },
+  "crif_parameters": {
+    "bureau_score": {
+      "accuracy": 1.0,
+      "remarks": "Correctly returned null due to invalid or out-of-range score values"
+    },
+    "total_accounts": {
+      "accuracy": 1.0
+    },
+    "active_accounts": {
+      "accuracy": 1.0
+    },
+    "secured_accounts": {
+      "accuracy": 1.0
+    },
+    "unsecured_accounts": {
+      "accuracy": 1.0
+    },
+    "total_current_balance": {
+      "accuracy": 0.95
+    },
+    "total_sanctioned_amount": {
+      "accuracy": 1.0
+    },
+    "total_overdue_amount": {
+      "accuracy": 0.95
+    },
+    "wilful_default": {
+      "accuracy": 1.0
+    },
+    "max_dpd": {
+      "accuracy": 1.0
+    }
+  },
+  "gst_sales": {
+    "accuracy": 1.0,
+    "remarks": "Table 3.1(a) extracted consistently across all months"
+  },
+  "overall_accuracy": 0.97
+}

@@ -1,0 +1,11 @@
+parameter_key,parameter_name,description,expected_section,data_type,notes
+bureau_score,Bureau Score,Credit score provided by CRIF High Mark (PERFORM CONSUMER 2.2),CRIF HM Score(s),number,Range 300–900
+total_accounts,Total Accounts,Total number of credit accounts reported,Account Summary,number,Includes active + closed
+active_accounts,Active Accounts,Number of currently active credit accounts,Account Summary,number,Use only active
+secured_accounts,Secured Accounts,Number of secured credit accounts,Account Summary,number,Loans with collateral
+unsecured_accounts,Unsecured Accounts,Number of unsecured credit accounts,Account Summary,number,"Credit cards, PL"
+total_current_balance,Total Current Balance,Sum of current outstanding balance for active accounts,Account Summary,number,INR only
+total_sanctioned_amount,Total Sanctioned Amount,Total sanctioned credit limit,Account Summary,number,INR only
+total_overdue_amount,Total Overdue Amount,Total overdue amount across all accounts,Account Summary,number,Zero if none
+wilful_default,Wilful Default,Whether borrower is flagged as wilful defaulter,Group Account Summary,boolean,true / false
+max_dpd,Max DPD,Maximum days past due across all accounts,Group Account Summary,number,0 if no delinquency

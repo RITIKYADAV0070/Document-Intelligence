@@ -1,0 +1,93 @@
+{
+  "bureau_parameters": {
+    "bureau_score": {
+      "value": null,
+      "source": "not_found",
+      "confidence": 0.0
+    },
+    "total_accounts": {
+      "value": 3,
+      "source": "Account Summary (page 14)",
+      "confidence": 0.49
+    },
+    "active_accounts": {
+      "value": 3,
+      "source": "Account Summary (page 14)",
+      "confidence": 0.51
+    },
+    "secured_accounts": {
+      "value": 3,
+      "source": "Account Summary (page 14)",
+      "confidence": 0.54
+    },
+    "unsecured_accounts": {
+      "value": 3,
+      "source": "Account Summary (page 14)",
+      "confidence": 0.61
+    },
+    "total_current_balance": {
+      "value": 24,
+      "source": "Account Summary (page 5)",
+      "confidence": 0.42
+    },
+    "total_sanctioned_amount": {
+      "value": 3,
+      "source": "Account Summary (page 14)",
+      "confidence": 0.48
+    },
+    "total_overdue_amount": {
+      "value": 24,
+      "source": "Account Summary (page 5)",
+      "confidence": 0.35
+    },
+    "wilful_default": {
+      "value": false,
+      "source": "Group Account Summary (page 10)",
+      "confidence": 0.5
+    },
+    "max_dpd": {
+      "value": 0,
+      "source": "Group Account Summary (page 8)",
+      "confidence": 0.37
+    }
+  },
+  "gst_sales": [
+    {
+      "month": "April 2024",
+      "sales": 976171,
+      "source": "GSTR-3B Table 3.1(a)",
+      "confidence": 0.99
+    },
+    {
+      "month": "December 2024",
+      "sales": 917677,
+      "source": "GSTR-3B Table 3.1(a)",
+      "confidence": 0.99
+    },
+    {
+      "month": "February 2024",
+      "sales": 500000,
+      "source": "GSTR-3B Table 3.1(a)",
+      "confidence": 0.99
+    },
+    {
+      "month": "January 2024",
+      "sales": 951381,
+      "source": "GSTR-3B Table 3.1(a)",
+      "confidence": 0.99
+    },
+    {
+      "month": "March 2024",
+      "sales": 1319800,
+      "source": "GSTR-3B Table 3.1(a)",
+      "confidence": 0.99
+    },
+    {
+      "month": "November 2024",
+      "sales": 649677,
+      "source": "GSTR-3B Table 3.1(a)",
+      "confidence": 0.99
+    }
+  ],
+  "overall_confidence_score": 0.68
+}
