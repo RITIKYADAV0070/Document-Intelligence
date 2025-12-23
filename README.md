@@ -3,33 +3,23 @@
 
 ---
 
-## 🔥 TL;DR (For Evaluators & Reviewers)
+## 🧠 Executive Summary (TL;DR)
 
-- Extracts structured financial data from unstructured PDFs  
-- Supports CRIF Credit Bureau Reports and GST GSTR-3B Returns  
-- Uses semantic embeddings for robust information retrieval  
-- Produces explainable, auditable JSON outputs  
-- Designed for accuracy, robustness, and production readiness  
+Document Intelligence is a production-ready AI system designed to understand, extract, validate, and explain structured financial data from complex, unstructured PDF documents, including CRIF Credit Bureau Reports and GST GSTR-3B Returns.
 
----
+At a glance, the system:
 
-## 🧠 Executive Summary
+Extracts structured financial data from unstructured PDFs
 
-**Document Intelligence** is a production-ready AI system designed to **understand, extract, validate, and explain structured financial data from complex, unstructured PDF documents**, including:
+Supports CRIF Bureau Reports and GST GSTR-3B Returns
 
-- CRIF Credit Bureau Reports  
-- GST GSTR-3B Returns  
+Uses semantic embeddings for robust information retrieval
 
-The system converts raw PDFs into **schema-aligned, explainable JSON outputs** using:
+Produces explainable, auditable JSON outputs
 
-- Intelligent PDF parsing  
-- Semantic embeddings & retrieval  
-- Targeted extraction pipelines  
-- Structured evaluation and validation  
+Is designed for accuracy, robustness, and production readiness
 
-This solution is suitable for **financial analytics, compliance, underwriting, and decisioning workflows**.
-
----
+The solution converts raw PDFs into schema-aligned, explainable JSON outputs using intelligent PDF parsing, semantic embeddings, targeted extraction pipelines, and structured evaluation—making it suitable for financial analytics, compliance, underwriting, and decisioning workflows.---
 
 ## 🎯 Problem Statement
 
