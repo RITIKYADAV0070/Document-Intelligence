@@ -14,7 +14,9 @@ At a glance, the system:
 - Produces explainable, auditable JSON outputs
 - Is designed for accuracy, robustness, and production readiness
 
-The solution converts raw PDFs into schema-aligned, explainable JSON outputs using intelligent PDF parsing, semantic embeddings, targeted extraction pipelines, and structured evaluation—making it suitable for financial analytics, compliance, underwriting, and decisioning workflows.---
+The solution converts raw PDFs into schema-aligned, explainable JSON outputs using intelligent PDF parsing, semantic embeddings, targeted extraction pipelines, and structured evaluation—making it suitable for financial analytics, compliance, underwriting, and decisioning workflows.
+
+---
 
 ## 🎯 Problem Statement
 
