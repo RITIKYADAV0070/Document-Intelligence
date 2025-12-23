@@ -3,7 +3,7 @@
 
 ---
 
-## 🧠 Executive Summary (TL;DR)
+## 🧠 Executive Summary 
 
 Document Intelligence is a production-ready AI system designed to understand, extract, validate, and explain structured financial data from complex, unstructured PDF documents, including CRIF Credit Bureau Reports and GST GSTR-3B Returns.
 
