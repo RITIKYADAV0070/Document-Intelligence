@@ -1,54 +1,317 @@
 {
-  "bureau_parameters": {
-    "bureau_score": {
-      "value": null,
-      "source": "not_found",
-      "confidence": 0.0
+  "run_timestamp_utc": "2025-12-23T21:28:35.334839Z",
+  "bureau_parameters_by_file": {
+    "JEET_Arora.pdf": {
+      "bureau_score": {
+        "value": null,
+        "source": "not_found",
+        "confidence": 0.0
+      },
+      "total_accounts": {
+        "value": 3,
+        "source": "Account Summary (page 14)",
+        "confidence": 0.49
+      },
+      "active_accounts": {
+        "value": 3,
+        "source": "Account Summary (page 14)",
+        "confidence": 0.51
+      },
+      "secured_accounts": {
+        "value": 3,
+        "source": "Account Summary (page 14)",
+        "confidence": 0.54
+      },
+      "unsecured_accounts": {
+        "value": 3,
+        "source": "Account Summary (page 14)",
+        "confidence": 0.61
+      },
+      "total_current_balance": {
+        "value": 24,
+        "source": "Account Summary (page 5)",
+        "confidence": 0.42
+      },
+      "total_sanctioned_amount": {
+        "value": 3,
+        "source": "Account Summary (page 14)",
+        "confidence": 0.48
+      },
+      "total_overdue_amount": {
+        "value": 24,
+        "source": "Account Summary (page 5)",
+        "confidence": 0.35
+      },
+      "wilful_default": {
+        "value": false,
+        "source": "Group Account Summary (page 10)",
+        "confidence": 0.5
+      },
+      "max_dpd": {
+        "value": 0,
+        "source": "Group Account Summary (page 8)",
+        "confidence": 0.37
+      }
     },
-    "total_accounts": {
-      "value": 3,
-      "source": "Account Summary (page 14)",
-      "confidence": 0.49
+    "SHATNAM .pdf": {
+      "bureau_score": {
+        "value": null,
+        "source": "not_found",
+        "confidence": 0.0
+      },
+      "total_accounts": {
+        "value": 14,
+        "source": "Account Summary (page 6)",
+        "confidence": 0.4
+      },
+      "active_accounts": {
+        "value": 1,
+        "source": "Account Summary (page 3)",
+        "confidence": 0.4
+      },
+      "secured_accounts": {
+        "value": 1,
+        "source": "Account Summary (page 3)",
+        "confidence": 0.42
+      },
+      "unsecured_accounts": {
+        "value": 1,
+        "source": "Account Summary (page 3)",
+        "confidence": 0.5
+      },
+      "total_current_balance": {
+        "value": 1,
+        "source": "Account Summary (page 3)",
+        "confidence": 0.37
+      },
+      "total_sanctioned_amount": {
+        "value": 14,
+        "source": "Account Summary (page 6)",
+        "confidence": 0.45
+      },
+      "total_overdue_amount": {
+        "value": 2025,
+        "source": "Account Summary (page 4)",
+        "confidence": 0.31
+      },
+      "wilful_default": {
+        "value": false,
+        "source": "Group Account Summary (page 3)",
+        "confidence": 0.46
+      },
+      "max_dpd": {
+        "value": 14,
+        "source": "Group Account Summary (page 6)",
+        "confidence": 0.31
+      }
     },
-    "active_accounts": {
-      "value": 3,
-      "source": "Account Summary (page 14)",
-      "confidence": 0.51
+    "SUJAL_GAUTAMBHAI .pdf": {
+      "bureau_score": {
+        "value": null,
+        "source": "not_found",
+        "confidence": 0.0
+      },
+      "total_accounts": {
+        "value": 2024,
+        "source": "Account Summary (page 5)",
+        "confidence": 0.44
+      },
+      "active_accounts": {
+        "value": 2024,
+        "source": "Account Summary (page 5)",
+        "confidence": 0.43
+      },
+      "secured_accounts": {
+        "value": 2024,
+        "source": "Account Summary (page 5)",
+        "confidence": 0.42
+      },
+      "unsecured_accounts": {
+        "value": 2024,
+        "source": "Account Summary (page 8)",
+        "confidence": 0.47
+      },
+      "total_current_balance": {
+        "value": 2024,
+        "source": "Account Summary (page 5)",
+        "confidence": 0.41
+      },
+      "total_sanctioned_amount": {
+        "value": 569856,
+        "source": "Account Summary (page 4)",
+        "confidence": 0.46
+      },
+      "total_overdue_amount": {
+        "value": 569856,
+        "source": "Account Summary (page 4)",
+        "confidence": 0.35
+      },
+      "wilful_default": {
+        "value": false,
+        "source": "Group Account Summary (page 5)",
+        "confidence": 0.44
+      },
+      "max_dpd": {
+        "value": 569856,
+        "source": "Group Account Summary (page 4)",
+        "confidence": 0.33
+      }
     },
-    "secured_accounts": {
-      "value": 3,
-      "source": "Account Summary (page 14)",
-      "confidence": 0.54
+    "Supriy.pdf": {
+      "bureau_score": {
+        "value": null,
+        "source": "not_found",
+        "confidence": 0.0
+      },
+      "total_accounts": {
+        "value": 8,
+        "source": "Account Summary (page 7)",
+        "confidence": 0.5
+      },
+      "active_accounts": {
+        "value": 20,
+        "source": "Account Summary (page 5)",
+        "confidence": 0.47
+      },
+      "secured_accounts": {
+        "value": 20,
+        "source": "Account Summary (page 5)",
+        "confidence": 0.46
+      },
+      "unsecured_accounts": {
+        "value": 8,
+        "source": "Account Summary (page 7)",
+        "confidence": 0.51
+      },
+      "total_current_balance": {
+        "value": 20,
+        "source": "Account Summary (page 5)",
+        "confidence": 0.41
+      },
+      "total_sanctioned_amount": {
+        "value": 8,
+        "source": "Account Summary (page 7)",
+        "confidence": 0.54
+      },
+      "total_overdue_amount": {
+        "value": 8,
+        "source": "Account Summary (page 7)",
+        "confidence": 0.38
+      },
+      "wilful_default": {
+        "value": false,
+        "source": "Group Account Summary (page 6)",
+        "confidence": 0.47
+      },
+      "max_dpd": {
+        "value": 8,
+        "source": "Group Account Summary (page 7)",
+        "confidence": 0.37
+      }
     },
-    "unsecured_accounts": {
-      "value": 3,
-      "source": "Account Summary (page 14)",
-      "confidence": 0.61
+    "Surana  .pdf": {
+      "bureau_score": {
+        "value": null,
+        "source": "not_found",
+        "confidence": 0.0
+      },
+      "total_accounts": {
+        "value": 8,
+        "source": "Account Summary (page 5)",
+        "confidence": 0.45
+      },
+      "active_accounts": {
+        "value": 8,
+        "source": "Account Summary (page 5)",
+        "confidence": 0.45
+      },
+      "secured_accounts": {
+        "value": 2022,
+        "source": "Account Summary (page 10)",
+        "confidence": 0.46
+      },
+      "unsecured_accounts": {
+        "value": 2022,
+        "source": "Account Summary (page 10)",
+        "confidence": 0.52
+      },
+      "total_current_balance": {
+        "value": 8,
+        "source": "Account Summary (page 5)",
+        "confidence": 0.39
+      },
+      "total_sanctioned_amount": {
+        "value": 8,
+        "source": "Account Summary (page 5)",
+        "confidence": 0.46
+      },
+      "total_overdue_amount": {
+        "value": 18,
+        "source": "Account Summary (page 4)",
+        "confidence": 0.32
+      },
+      "wilful_default": {
+        "value": false,
+        "source": "Group Account Summary (page 11)",
+        "confidence": 0.44
+      },
+      "max_dpd": {
+        "value": 36,
+        "source": "Group Account Summary (page 7)",
+        "confidence": 0.33
+      }
     },
-    "total_current_balance": {
-      "value": 24,
-      "source": "Account Summary (page 5)",
-      "confidence": 0.42
-    },
-    "total_sanctioned_amount": {
-      "value": 3,
-      "source": "Account Summary (page 14)",
-      "confidence": 0.48
-    },
-    "total_overdue_amount": {
-      "value": 24,
-      "source": "Account Summary (page 5)",
-      "confidence": 0.35
-    },
-    "wilful_default": {
-      "value": false,
-      "source": "Group Account Summary (page 10)",
-      "confidence": 0.5
-    },
-    "max_dpd": {
-      "value": 0,
-      "source": "Group Account Summary (page 8)",
-      "confidence": 0.37
+    "VISHAL .pdf": {
+      "bureau_score": {
+        "value": null,
+        "source": "not_found",
+        "confidence": 0.0
+      },
+      "total_accounts": {
+        "value": 2024,
+        "source": "Account Summary (page 4)",
+        "confidence": 0.45
+      },
+      "active_accounts": {
+        "value": 2024,
+        "source": "Account Summary (page 4)",
+        "confidence": 0.43
+      },
+      "secured_accounts": {
+        "value": 0,
+        "source": "Account Summary (page 7)",
+        "confidence": 0.44
+      },
+      "unsecured_accounts": {
+        "value": 2015,
+        "source": "Account Summary (page 8)",
+        "confidence": 0.52
+      },
+      "total_current_balance": {
+        "value": 2015,
+        "source": "Account Summary (page 8)",
+        "confidence": 0.39
+      },
+      "total_sanctioned_amount": {
+        "value": 2024,
+        "source": "Account Summary (page 4)",
+        "confidence": 0.5
+      },
+      "total_overdue_amount": {
+        "value": 2015,
+        "source": "Account Summary (page 8)",
+        "confidence": 0.34
+      },
+      "wilful_default": {
+        "value": false,
+        "source": "Group Account Summary (page 5)",
+        "confidence": 0.48
+      },
+      "max_dpd": {
+        "value": 7,
+        "source": "Group Account Summary (page 9)",
+        "confidence": 0.35
+      }
     }
   },
   "gst_sales": [
